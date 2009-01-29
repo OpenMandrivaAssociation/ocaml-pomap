@@ -9,6 +9,7 @@ Source0:	http://hg.ocaml.info/release/pomap/archive/pomap-release-%{version}.tar
 # curl http://hg.ocaml.info/release/pomap/archive/release-%{version}.tar.bz2 > pomap-release-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
+BuildRequires:  tetex-latex
 BuildRequires:  gzip
 
 %description
