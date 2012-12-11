@@ -1,15 +1,15 @@
 Name:		ocaml-pomap
 Version:	2.9.9
-Release:        %mkrel 2
+Release:        3
 Summary:        Library for maintaining partially ordered maps
 License:        LGPL
 Group:          Development/Other
 URL:		http://www.ocaml.info/home/ocaml_sources.html#pomap
 Source0:	http://hg.ocaml.info/release/pomap/archive/pomap-release-%{version}.tar.bz2
 # curl http://hg.ocaml.info/release/pomap/archive/release-%{version}.tar.bz2 > pomap-release-%{version}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
-BuildRequires:  tetex-latex
+BuildRequires:  ocaml
+BuildRequires:  texlive
 BuildRequires:  gzip
 
 %description
@@ -36,14 +36,10 @@ make doc
 gzip --best doc/pomap/latex/doc.ps
 
 %install
-rm -rf %{buildroot}
 export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 install -d -m 755 %{buildroot}/%{_libdir}/ocaml/pomap
 make install
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -62,4 +58,17 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/pomap/*.a
 %{_libdir}/ocaml/pomap/*.cmxa
 %{_libdir}/ocaml/pomap/*.mli
+
+
+
+%changelog
+* Sun Jun 28 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.9.9-2mdv2010.0
++ Revision: 390299
+- rebuild
+
+* Thu Jan 29 2009 Florent Monnier <blue_prawn@mandriva.org> 2.9.9-1mdv2009.1
++ Revision: 335200
+- requires latex
+- import ocaml-pomap
+
 
