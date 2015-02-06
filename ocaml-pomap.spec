@@ -1,6 +1,6 @@
 Name:		ocaml-pomap
 Version:	2.9.9
-Release:        3
+Release:        4
 Summary:        Library for maintaining partially ordered maps
 License:        LGPL
 Group:          Development/Other
