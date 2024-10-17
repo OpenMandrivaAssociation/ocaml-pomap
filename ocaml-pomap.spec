@@ -4,7 +4,7 @@ Release:        4
 Summary:        Library for maintaining partially ordered maps
 License:        LGPL
 Group:          Development/Other
-URL:		http://www.ocaml.info/home/ocaml_sources.html#pomap
+URL:		https://www.ocaml.info/home/ocaml_sources.html#pomap
 Source0:	http://hg.ocaml.info/release/pomap/archive/pomap-release-%{version}.tar.bz2
 # curl http://hg.ocaml.info/release/pomap/archive/release-%{version}.tar.bz2 > pomap-release-%{version}.tar.bz2
 BuildRequires:  ocaml-findlib
